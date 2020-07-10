@@ -22,8 +22,12 @@ public class DropShipperServiceImpl implements DropShipperService {
     };
 
     @Override
-    public void updateDropShipperName(String DSR_ID, String newName){};
+    public void updateDropShipperName(String DSR_ID, String NAME){
+        mapper.updateDropShipperName(DSR_ID, NAME);
+    };
 
     @Override
-    public void updateRemark(String DSR_ID, String newRemark){};
+    public void updateRemark(String DSR_ID, String REMARK){
+        mapper.updateRemark(DSR_ID, REMARK);
+    };
 }

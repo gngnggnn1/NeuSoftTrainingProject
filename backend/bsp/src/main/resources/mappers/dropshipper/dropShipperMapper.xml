@@ -9,16 +9,16 @@
     <!--    </select>-->
 
     <update id="updateDropShipperName" parameterType="java.lang.String">
-        update dsr_dropshipper set NAME = #{newName} where DSR_ID = #{id}
+        update dsr_dropshipper set NAME = #{NAME} where DSR_ID = #{DSR_ID}
     </update>
 
-    <update id="updateDropShipperRemark" parameterType="java.lang.String">
-        update dsr_dropshipper set REMARK = #{newRemark} where DSR_ID = #{id}
+    <update id="updateRemark" parameterType="java.lang.String">
+        update dsr_dropshipper set REMARK = #{REMARK} where DSR_ID = #{DSR_ID}
     </update>
 
     <select id="getDropShipperName" parameterType="java.lang.String" resultType="java.lang.String" >
-    select NAME from dsr_dropshipper where DSR_ID = #{DSR_ID}
-</select>
+        select NAME from dsr_dropshipper where DSR_ID = #{DSR_ID}
+    </select>
 
     <select id="getDropShipperRemark" parameterType="java.lang.String" resultType="java.lang.String" >
         select REMARK from dsr_dropshipper where DSR_ID = #{DSR_ID}
